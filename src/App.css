@@ -1,0 +1,26 @@
+html {
+  scroll-behavior: smooth; /* Akıcı kaydırma */
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(to bottom, #2b3e50, #d6eaff);
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+  background-color: white;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}

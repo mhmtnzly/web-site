@@ -1,0 +1,104 @@
+.hero-section {
+  position: relative;
+  background: linear-gradient(45deg, #a00000, #ff4d4d);
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+.hero-content p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 22px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #25d366;
+  color: white;
+  border: none;
+  padding: 18px 35px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  text-decoration: none;
+  display: inline-flex; /* İkon ve metni hizalamak için */
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-button:hover {
+  background-color: #128c7e;
+  transform: translateY(-3px);
+}
+
+.whatsapp-icon {
+  font-size: 24px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 450px;
+    background: linear-gradient(45deg, #a00000, #ff4d4d);
+  }
+  .hero-content h1 {
+    font-size: 38px;
+    color: white;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 350px;
+  }
+  .hero-content h1 {
+    font-size: 28px;
+  }
+  .hero-content p {
+    font-size: 16px;
+  }
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}

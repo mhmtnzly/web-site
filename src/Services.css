@@ -1,0 +1,116 @@
+.services-section {
+  padding: 60px 20px; /* Daha fazla boşluk */
+  background-color: transparent;
+  text-align: center;
+  color: #e0e0e0;
+}
+
+.services-section h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 44px; /* Başlığı büyüttük */
+  margin-bottom: 50px; /* Alt boşluğu artırdık */
+  color: #ff4d4d; /* Başlık rengi kırmızı */
+  position: relative;
+}
+
+.services-section h2::after {
+  /* Başlığın altına çizgi efekti */
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background-color: #ff4d4d;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  border-radius: 2px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px; /* Kartlar arası boşluğu artırdık */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #333333; /* Kart arka planı koyu gri */
+  padding: 40px; /* İç boşluğu artırdık */
+  border-radius: 12px; /* Daha yuvarlak köşeler */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Gölgeyi daha belirgin ve koyu yaptık */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #444; /* Hafif kenarlık */
+}
+
+.service-card:hover {
+  transform: translateY(-8px); /* Hover'da daha belirgin kalkma */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7); /* Hover'da gölge artar */
+}
+
+.service-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px; /* Başlığı büyüttük */
+  color: #ff4d4d; /* Başlık rengi kırmızı */
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px; /* Paragraf fontu */
+  color: #a0a0a0; /* Paragraf rengi açık gri */
+  line-height: 1.6; /* Satır aralığını artırdık */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-section h2 {
+    font-size: 36px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .service-card {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 40px 15px;
+  }
+  .services-section h2 {
+    font-size: 30px;
+  }
+  .service-card h3 {
+    font-size: 24px;
+  }
+  .service-card p {
+    font-size: 16px;
+  }
+}
+/* ... mevcut kodlar ... */
+
+.service-icon {
+  font-size: 50px;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite; /* İkona animasyon ekledik */
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
